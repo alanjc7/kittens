@@ -2,7 +2,7 @@
 
 A web app for viewing and rating cat profiles.
 
-## System dependencies
+## System dependencies
 
 - Ruby version: 2.6.5
 - Rails version: 6.0.3.2
