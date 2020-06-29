@@ -9,9 +9,25 @@ A web app for viewing and rating cat profiles.
 
 ## Running locally
 
-- Database creation
-- Database initialization
+To create the database and load the scheme run:
+
+```
+db:setup
+```
+
+Then start the rails server
+
+```
+rails s
+```
+
+You should now have the application running!  
+Try visiting `localhost:3000` and if you need a console its `rails c`
 
 ## Testing
 
-- How to run the test suite
+To run the very limited specs run
+
+```
+bundle exec rspec
+```
