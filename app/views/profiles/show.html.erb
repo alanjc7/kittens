@@ -1,0 +1,14 @@
+<h1>
+  Hey! I'm <%= @profile.name %>
+</h1>
+
+<% if @profile.avatar.attached? %>
+  <img src="<%=(url_for(@profile.avatar))%>%">
+<% end %>
+
+<p>Me in my own words:</p>
+<p>
+  <%= @profile.description %>
+</p>
+
+<p>Likes: <% @profile.likes %></p>
