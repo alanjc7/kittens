@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  SORTABLE_VALUES = %i[ranking_score created_at].freeze
+
   def new; end
 
   def create
@@ -14,7 +16,8 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = Profile.all.sort_by(&:created_at).reverse
+    sort = (SORTABLE_VALUES & [params.dig(:q, :s)&.to_sym]).first || :created_at
+    @profiles = Profile.all.sort_by(&sort).reverse
   end
 
   private

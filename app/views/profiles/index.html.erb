@@ -1,6 +1,8 @@
 <h1>Check out these kitten cats!</h1>
 
 <div><%= link_to "Create your own profile", new_profile_path %></div>
+<%= link_to "sort by ranking", url_for(q: { s: 'ranking_score' }) %>
+<%= link_to "sort by date", url_for(q: { s: 'created_at' }) %>
  
 <table>
   <% @profiles.each do |profile| %>

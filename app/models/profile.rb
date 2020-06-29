@@ -15,7 +15,7 @@ class Profile < ApplicationRecord
   private
 
   def vowel_consonant_ratio
-    (count_vowels / count_consonants).to_f
+    count_vowels.to_f / count_consonants.to_f
   end
 
   def count_consonants
