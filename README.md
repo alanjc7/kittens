@@ -9,7 +9,7 @@ A web app for viewing and rating cat profiles.
 
 ## Running locally
 
-To create the database and load the scheme run:
+To create the database and load the schema run:
 
 ```
 db:setup
@@ -35,5 +35,5 @@ bundle exec rspec
 ## TO DO
 
 - more specs
-- better styling (design input needed!)
+- improve styling
 - database seeds
