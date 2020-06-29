@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.all.sort_by(&:created_at).reverse
   end
 
   private
