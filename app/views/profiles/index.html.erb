@@ -1,0 +1,14 @@
+<h1>Check out these kitten cats!</h1>
+
+<div><%= link_to "Create your own profile", new_profile_path %></div>
+ 
+<table>
+  <% @profiles.each do |profile| %>
+    <tr>
+      <%if profile.avatar.attached? %>
+        <td><%= link_to image_tag(url_for(profile.avatar)), profile_path(profile) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+

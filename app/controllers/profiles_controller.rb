@@ -12,6 +12,10 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
   end
 
+  def index
+    @profiles = Profile.all
+  end
+
   private
 
   def create_params
