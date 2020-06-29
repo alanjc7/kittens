@@ -31,3 +31,9 @@ To run the very limited specs run
 ```
 bundle exec rspec
 ```
+
+## TO DO
+
+- more specs
+- better styling (design input needed!)
+- database seeds
