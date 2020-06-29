@@ -6,12 +6,22 @@
   <img src="<%=(url_for(@profile.avatar))%>%">
 <% end %>
 
-<p><b>Me in my own words:</b></p>
-<p>
+<p><b>Me in my own words:</b>
   <%= @profile.description %>
 </p>
 
 <p>Profile views: <%= @profile.views %> </p>
-<p>Likes: <% @profile.likes %></p>
+<p>Likes: <%= @profile.total_score %></p>
+
+<%= form_with(model: [ @profile, @profile.likes.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :your_name %><br>
+    <%= form.text_field :by %>
+  </p>
+  <p>
+    <%= form.submit 'Meow!'%>
+    <%= form.submit 'Not my type..'%>
+  </p>
+<% end %>
 
 <div><%= link_to "Show more cool cats", profiles_path%></div>
