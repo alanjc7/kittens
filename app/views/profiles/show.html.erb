@@ -13,15 +13,17 @@
 <p>Profile views: <%= @profile.views %> </p>
 <p>Likes: <%= @profile.total_score %></p>
 
-<%= form_with(model: [ @profile, @profile.likes.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :your_name %><br>
-    <%= form.text_field :by %>
-  </p>
-  <p>
-    <%= form.submit 'Meow!'%>
-    <%= form.submit 'Not my type..'%>
-  </p>
-<% end %>
+<div>
+  <b>Leave a scratch?</b>
+  <%= form_with(model: [ @profile, @profile.likes.build ], local: true) do |form| %>
+    <p>
+      <%= form.text_field :by, placeholder: "Your name" %>
+    </p>
+    <p>
+      <%= form.submit 'Meow!'%>
+      <%= form.submit 'Not my type..'%>
+    </p>
+  <% end %>
+</div>
 
-<div><%= link_to "Show more cool cats", profiles_path%></div>
+<div><%= link_to "Show all the cool cats", profiles_path%></div>
